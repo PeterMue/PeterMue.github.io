@@ -1,44 +1,21 @@
-
----
-
-### `post2.md` - Setting Up GitHub Pages
-
-```markdown
-# Setting Up GitHub Pages
+# Oh Noo, My Car’s Engine Broke
 
 **Date:** June 5, 2025  
-GitHub Pages is a powerful, free service that lets you host static websites directly from a GitHub repository. Want to create a simple blog? Here’s how!
+_Disaster strikes—the engine is down for the count!_  
 
-## Steps to Set Up GitHub Pages
+There’s nothing quite like starting your car, expecting the familiar roar of the engine… and then—silence. At first, I thought it was just a random glitch, maybe a drained battery or something simple. But no. After a few more attempts and a trip to the mechanic, the diagnosis was clear—**my engine is in serious trouble.**  
 
-1. **Create a GitHub Repository**  
-   - Name it something like `my-blog`.
-   - Initialize with a README (optional).
+## What Happened?  
 
-2. **Add Your Markdown or HTML Files**  
-   - Upload your `index.md` and other blog posts.
+I had noticed a few strange noises coming from the car over the past week—occasional rattling, rough idling—but I didn’t think much of it. I figured it was just the usual wear and tear. Turns out, it was a **big** warning sign that I ignored! Now, I’m stuck with a choice:  
+1. **Repair it** – A costly, time-consuming process with no guarantee of longevity.  
+2. **Replace it** – Either get a new engine or start looking for a new car altogether.  
 
-3. **Enable GitHub Pages**  
-   - Go to **Settings** > **Pages**.
-   - Under **Branch**, select `main` and click **Save**.
+## The Emotional Rollercoaster  
 
-## Example Screenshot
+Cars aren’t just metal and machinery—they hold memories. The road trips, the late-night drives, the countless times I’ve relied on it to get me places. I’m still weighing my options, but it’s definitely a tough decision.  
 
-Here’s a placeholder image to demonstrate the process:
+If anyone has advice on whether to repair or replace, I’m all ears!  
 
-![GitHub Pages Setup](https://via.placeholder.com/600x300)
+![Broken Car Engine](./assets/images/engine.jpg)
 
-## Customizing Your Site
-
-You can personalize your blog using:
-
-- **Themes:** GitHub Pages supports Jekyll themes.
-- **CSS & HTML:** Add styles to improve your design.
-- **Custom Domains:** Use your own domain name.
-
-## Ready to Publish?
-
-Once everything is set up, visit your site at:  
-**`https://yourusername.github.io/my-blog`**  
-
-Keep experimenting, and happy blogging! 🚀
