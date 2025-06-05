@@ -11,6 +11,7 @@ This is just a Demo site for Stefan ;-)
 
 Markdown can be *fun* and **easy**, let's give it a `serious` try!
 
+Oh, and with the GitHub App for Android, you can even write stuff from anywhere.
 
 ## Latest Posts
 
