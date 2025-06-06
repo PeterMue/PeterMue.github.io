@@ -27,7 +27,7 @@ The nightmare has become reality—my car’s engine broke! Now I'm stuck decidi
 3D printing is a game-changer! I’ve started turning digital designs into real objects and exploring the endless possibilities—from household gadgets to fun artistic creations. There’s a lot to learn, but the excitement is unreal!
 
 
-## [![Exciting 3D Printing](assets/images/3dprint.jpg){: width="50" }](post3.md)
+### [Foobar](foo/bar.md)
 
 ## Contact Me
 
