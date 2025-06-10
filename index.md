@@ -80,6 +80,7 @@ Thankfully, Jekyll already created a simple layout for us.
 Inspect the `default.html` in the `_layouts` directory:
 
 ```html
+{% raw %}
 <!DOCTYPE html>
 <html lang="{{ site.lang | default: "en-US" }}">
   <head>
@@ -92,6 +93,7 @@ Inspect the `default.html` in the `_layouts` directory:
     {{ content }}
   </body>
 </html>
+{% endraw %}
 ```
 
 This layout includes a `<head>` section with the page title and a link to the main stylesheet, as well as a `<body>` section that will contain the content of each page.
@@ -107,6 +109,7 @@ The latter approach gives us more flexibility and allows us to reuse the header 
 Create a new file called `_includes/header.html` and add the following content:
 
 ```html
+{% raw %}
 <header>
   <h1>{{ site.title }}</h1>
   <nav>
@@ -117,6 +120,7 @@ Create a new file called `_includes/header.html` and add the following content:
     </ul>
   </nav>
 </header>
+{% endraw %}
 ```
 
 Our header includes the Site's title and a navigation with links to the home, about, and contact pages.
@@ -124,16 +128,19 @@ Our header includes the Site's title and a navigation with links to the home, ab
 Next, create a file called `_includes/footer.html` and add the following content:
 
 ```html
+{% raw %}
 <footer>
   <p>&copy; {{ site.time | date: "%Y" }} {{ site.title }}. All rights reserved.</p>
   <p>Powered by <a href="https://jekyllrb.com" target="_blank">Jekyll</a>.</p>
 </footer>
+{% endraw %}
 ```
 
 Our footer includes the current year and a link to the Jekyll website.
 Now, we can include these files in our `default.html` layout by adding the following lines:
 
 ```html
+{% raw %}
 <body>
   {% include header.html %}
   <hr>
@@ -141,6 +148,7 @@ Now, we can include these files in our `default.html` layout by adding the follo
   <hr>
   {% include footer.html %}
 </body>
+{% endraw %}
 ```
 
 For now, as we not yet have any styles applied, we visually separete the header and footer from the main content, by adding a horizontal rule (`<hr>`) before and after the content.
@@ -158,11 +166,13 @@ Right now, the `_sass/base.scss` file gets imported into `main.scss` by default,
 I'm not a design expert, so I will just add some basic styles to show how it works.
 
 ```scss
+{% raw %}
 // _sass/base.scss
 h1 {
   color: #6B7C59;
   font-size: 2em;
 }
+{% endraw %}
 ```
 
 *Tipp: if you inspect this site, you'll find another css named `monokai.css`. It's purpose is to make the code samples look nice.*
@@ -176,6 +186,7 @@ In our header navigation we link to an about and a contact page, so let's create
 Create a new file called `about.md` and add the following content:
 
 ```markdown
+{% raw %}
 ---
 layout: default
 title: "About"
@@ -184,11 +195,13 @@ title: "About"
 ## About
 
 About me and this site.
+{% endraw %}
 ```
 
 Create another file called `contact.md` and add the following content:
 
 ```markdown
+{% raw %}
 ---
 layout: default
 title: "Contact & Imprint"
@@ -202,6 +215,7 @@ If you have any questions, suggestions or just want to say hello, feel free to c
 [Contact](mailto:)
 
 Dummy text for all the legal stuff, like imprint, privacy policy, etc.
+{% endraw %}
 ```
 
 ### Using the Blog Feature
@@ -211,6 +225,7 @@ To create a blog post, you need to create a file in the `_posts` directory with 
 For example, to create a blog post about Jekyll, you can create a file called `_posts/2025-06-01-jekyll.md` and add the following content:
 
 ```markdown
+{% raw %}
 ---
 layout: default
 title: "Jekyll"
@@ -221,6 +236,7 @@ categories: jekyll update
 # Jekyll
 Jekyll is a simple, blog-aware, static site generator.
 Jekyll takes a template directory containing raw text files in various formats, runs it through a converter (like Markdown), and produces a complete, ready-to-publish static website suitable for serving with your favorite web server.
+{% endraw %}
 ```
 
 This will create a blog post with the title "Jekyll" and the date set to June 1, 2025.
@@ -230,6 +246,7 @@ Right now, the blog posts will not be displayed on the homepage, but you can cre
 Create a new file called `blog.md` and add the following content:
 
 ```markdown
+{% raw %}
 ---
 layout: default
 title: "Blog"
@@ -241,12 +258,15 @@ title: "Blog"
   <p>{{ post.date | date: "%B %d, %Y" }}</p>
   <p>{{ post.excerpt }}</p>
 {% endfor %}
+{% endraw %}
 ```
 This will create a blog page that lists all blog posts with their titles, dates, and excerpts.
 You can link to this page from the header navigation by adding a new list item in the `_includes/header.html` file:
 
 ```html
+{% raw %}
 <li><a href="{{ "/blog" | relative_url }}">Blog</a></li>
+{% endraw %}
 ```
 
 ### Not Found
@@ -255,6 +275,7 @@ Last but not least, let's create a simple 404 page that will be displayed when a
 Create a new file called `404.html` in the root directory and add the following content:
 
 ```html
+{% raw %}
 ---
 title: 404 Not Found
 layout: default
@@ -265,6 +286,7 @@ permalink: /404.html
 This is not what you are looking for.
 
 # 404
+{% endraw %}
 ```
 
 This will create a simple 404 page with a title and a message.
