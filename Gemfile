@@ -11,12 +11,11 @@ group :jekyll_plugins do
     gem 'jekyll-feed'
     gem 'jekyll-get-json'
     gem 'jekyll-imagemagick'
-    gem 'jekyll-jupyter-notebook'
     gem 'jekyll-link-attributes'
     gem 'jekyll-minifier'
     gem 'jekyll-paginate-v2'
     gem 'jekyll-regex-replace'
-    gem 'jekyll-scholar'
+    gem 'jekyll-scholar' # required by al_folio_core's post layout to parse the {% bibliography %} tag; kept unconfigured/unused
     gem 'jekyll-sitemap'
     gem 'jekyll-socials'
     gem 'jekyll-tabs'

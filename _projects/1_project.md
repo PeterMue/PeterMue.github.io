@@ -1,81 +1,65 @@
 ---
 layout: page
-title: project 1
-description: with background image
-img: assets/img/12.jpg
+title: Birthday Balloon Bash 🎈
+description: A PIN-protected, gamified birthday surprise page — no server, no accounts, just balloons, confetti and a heartfelt message delivered by QR code.
+img: assets/img/birthday-balloon-bash.png
 importance: 1
-category: work
-related_publications: true
+category: fun
+related_publications: false
 ---
 
-Every project has a beautiful feature showcase page.
-It's easy to include images in a flexible 3-column grid format.
-Make your photos 1/3, 2/3, or full width.
+## Why I built this
 
-To give your project a background in the portfolio page, just add the img tag to the front matter like so:
+My twin sons turned 10 — and it also happened to be the day they got their very first
+smartphones. Their "real" present hadn't arrived in time, so I needed something to
+bridge the gap that still felt special and personal.
 
-    ---
-    layout: page
-    title: project
-    description: a project with a background image
-    img: /assets/img/12.jpg
-    ---
+So I built **Birthday Balloon Bash**: a single-page site that greets them by name, asks
+for a secret 4-digit PIN, and then reveals a heartfelt message together with balloons,
+confetti and some music — plus a little "pop the balloons before time runs out" mini-game
+as a bonus surprise.
 
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/1.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/3.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    Caption photos easily. On the left, a road goes through a tunnel. Middle, leaves artistically fall in a hipster photoshoot. Right, in another hipster photoshoot, a lumberjack grasps a handful of pine needles.
-</div>
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    This image can also have a caption. It's like magic.
-</div>
+Since they'd just gotten their phones, a QR code felt like the perfect delivery mechanism.
+I 3D-printed a little QR code stand, popped it next to their new phones, and let them scan
+their way to the surprise. 🎉
 
-You can also put regular text between your rows of images, even citations {% cite einstein1950meaning %}.
-Say you wanted to write a bit about your project before you posted the rest of the images.
-You describe how you toiled, sweated, _bled_ for your project, and then... you reveal its glory in the next row of images.
+## What it does
 
-<div class="row justify-content-sm-center">
-    <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    You can also have artistically styled 2/3 + 1/3 images, like these.
-</div>
+- **Personalized reveal** — enter a name and a message once on the creator page, get back
+  a shareable, encrypted link.
+- **PIN-protected** — recipients need a 4-digit PIN to unlock the message. It's fun
+  suspense, not real security (this is for birthday wishes, not secrets).
+- **Balloons, confetti & music** — a festive animated reveal with sound effects, built with
+  plain CSS animations, the Web Audio API and `<canvas>` confetti.
+- **A balloon-popping mini-game** — an easter egg: pop 20 balloons before the 60-second
+  clock runs out to win, with escalating spawn waves to keep it exciting.
+- **Selectable color themes** — Pink, Green, Blue, Purple or Gold, picked on the creator
+  page and passed along as a plain (non-secret) `?theme=` URL parameter.
+- **Bilingual** — automatically shows English or German based on the visitor's browser
+  language, with a `?lang=` override.
+- **Zero backend** — everything, including the encryption, runs entirely client-side.
+  Nothing is ever sent to a server.
 
-The code is simple.
-Just wrap your images with `<div class="col-sm">` and place them inside `<div class="row">` (read more about the <a href="https://getbootstrap.com/docs/4.4/layout/grid/">Bootstrap Grid</a> system).
-To make images responsive, add `img-fluid` class to each; for rounded corners and shadows use `rounded` and `z-depth-1` classes.
-Here's the code for the last row of images above:
+## How it works
 
-{% raw %}
+Creating a surprise encrypts `{ name, message }` with **AES-GCM**, deriving the key from
+the chosen 4-digit PIN via **PBKDF2** (200,000 iterations) using the browser's native
+Web Crypto API. The result is packed into a URL-safe token and embedded as a `?payload=`
+query parameter — no server round-trip required.
 
-```html
-<div class="row justify-content-sm-center">
-  <div class="col-sm-8 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-  </div>
-  <div class="col-sm-4 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-  </div>
-</div>
-```
+When the recipient opens the link, they're prompted for the PIN. A correct guess decrypts
+the token entirely in the browser and reveals the personalized message, balloons, and
+game. Messages support a small allowlist of safe HTML tags, so the sender can format text
+without risking script injection.
 
-{% endraw %}
+Because it's 100% static, the whole project is hosted for free on **GitHub Pages** with
+no build step and no dependencies — just `index.html`, `styles.css`, and `app.js`.
+
+## Try it
+
+**[petermue.github.io/birthday-balloon-bash](https://petermue.github.io/birthday-balloon-bash)**
+
+Open the link with no parameters to create your own encrypted surprise link — no
+installation, no account, just fill in a name, a message, a PIN and a color theme.
+
+Source code: [github.com/PeterMue/birthday-balloon-bash](https://github.com/PeterMue/birthday-balloon-bash)

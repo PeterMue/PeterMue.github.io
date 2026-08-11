@@ -1,14 +1,13 @@
 github_users:
-  - torvalds
-  - alshedivat
+  - PeterMue
 
 repo_description_lines_max: 2
 
 github_repos:
-  - alshedivat/al-folio
-  - jekyll/jekyll
-  - twbs/bootstrap
-  - jquery/jquery
-  - FortAwesome/Font-Awesome
-  - mathjax/MathJax
-  - jpswalsh/academicons
+  - petermue/birthday-balloon-bash
+  - petermue/eierautomat
+  - petermue/macos-ansible
+  - petermue/gmoccapy-icon-themes
+  - linuxcnc/linuxcnc
+  - petermue/zx45-linuxcnc
+  - petermue/vscode-linuxcnc
