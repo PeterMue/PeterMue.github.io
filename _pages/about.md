@@ -26,7 +26,6 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
-
 ## software architect & enterprise bridge-builder
 
 Since 2011, I’ve worked as a Software Architect focusing on enterprise-scale integration, middleware, and API design/gateway infrastructure within the insurance sector. A core theme of my career is bridging the gap between legacy core systems and modern paradigms—connecting mainframe and COBOL environments with modern Java, Kubernetes, and JavaScript stacks.
