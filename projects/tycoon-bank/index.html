@@ -1,0 +1,255 @@
+<!DOCTYPE html> <html lang="en"> <head> <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> <meta charset="utf-8"> <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> <meta http-equiv="X-UA-Compatible" content="IE=edge"> <title> TycoonBank 🏦 | Peter Müller </title> <meta name="author" content="Peter Müller"> <meta name="description" content="A touch-first digital board game banker built for tabletop iPad play — realistic credit cards, drag-and-drop transfers, kid-proof multiplier keypads, and an instant Undo button."> <meta name="keywords" content="jekyll, jekyll-theme, academic-website, portfolio-website"> <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https:; style-src 'self' 'unsafe-inline' https:; img-src 'self' data: https:; font-src 'self' data: https:; media-src 'self' https:; frame-src 'self' https:; connect-src 'self' https:;"> <style>
+  :root {
+    --max-content-width: 930px;
+  }
+</style> <link rel="stylesheet" href="/assets/css/tailwind.css?v=50c64c15cbb9fd1ce6056fdb8bcb4b62"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.2.0/css/all.min.css" integrity="sha256-MVopmdyC2tYTiJ8wlktf0uh0v4NgT+vNdyVFepi7Q0c=" crossorigin="anonymous"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@1.9.5/css/academicons.min.css" integrity="sha256-SzrCOBJbGVFMahewkgjwnApaV2+av1DwMAA+/QGLyZw=" crossorigin="anonymous"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/scholar-icons@1.0.3/css/scholar-icons.css" integrity="sha256-VY3hHVj/hNX3fYG6wtbA6TcKJQl7+FthzGSyIB64klY=" crossorigin="anonymous"> <link defer rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700|Material+Icons&amp;display=swap"> <link defer rel="stylesheet" href="/assets/css/jekyll-pygments-themes-github.css?v=591dab5a4e56573bf4ef7fd332894c99" media="" id="highlight_theme_light"> <link rel="shortcut icon" href="data:image/svg+xml,&lt;svg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20100%20100%22&gt;&lt;text%20y=%22.9em%22%20font-size=%2290%22&gt;%E2%9A%9B%EF%B8%8F&lt;/text&gt;&lt;/svg&gt;"> <link rel="stylesheet" href="/assets/css/main.css?v=3116ba77db9ee1581d05bb3e86fbf7f1"> <link rel="canonical" href="https://petermue.github.io/projects/tycoon-bank/"> <script src="/assets/js/theme.js?v=5286c3e4c334d0ecb8fc0c40ff4fa7ec"></script> <link defer rel="stylesheet" href="/assets/css/jekyll-pygments-themes-native.css?v=5847e5ed4a4568527aa6cfab446049ca" media="none" id="highlight_theme_dark"> <script>
+    initTheme();
+  </script> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vanilla-cookieconsent@3.1.0/dist/cookieconsent.css" integrity="sha256-ygRrixsQlBByBZiOcJamh7JByO9fP+/l5UPtKNJmRsE=" crossorigin="anonymous"> <link rel="stylesheet" href="/assets/al_email_protect/css/email-protect.css"> </head> <body class="fixed-top-nav "> <header> <nav id="navbar" class="navbar navbar-light navbar-expand-sm fixed-top" role="navigation"> <div class="container"> <a class="navbar-brand title font-weight-lighter" href="/"> <span class="font-weight-bold">Peter</span> Müller </a> <button class="navbar-toggler collapsed navbar-toggler-main" type="button" data-nav-toggle="navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar top-bar"></span> <span class="icon-bar middle-bar"></span> <span class="icon-bar bottom-bar"></span> </button> <div class="collapse navbar-collapse navbar-collapse-main" id="navbarNav"> <ul class="navbar-nav navbar-menu-list flex-nowrap"> <li class="nav-item "> <a class="nav-link" href="/">about </a> </li> <li class="nav-item "> <a class="nav-link" href="/blog/">blog </a> </li> <li class="nav-item active"> <a class="nav-link" href="/projects/">projects <span class="sr-only">(current)</span> </a> </li> <li class="nav-item "> <a class="nav-link" href="/repositories/">repositories </a> </li> <li class="nav-item "> <a class="nav-link" href="/cv/">CV </a> </li> <li class="nav-item"> <button id="search-toggle" type="button" title="Search" aria-label="Open search"> <span class="nav-link">ctrl k <i class="fa-solid fa-magnifying-glass"></i></span> </button> </li> <li class="toggle-container"> <button id="light-toggle" type="button" title="Change theme" aria-label="Change color theme"> <i class="fa-half-sun-moon" id="light-toggle-system"></i> <i class="fa-solid fa-moon" id="light-toggle-dark"></i> <i class="fa-solid fa-sun" id="light-toggle-light"></i> </button> </li> </ul> </div> </div> </nav> <progress id="progress" value="0"> <div class="progress-container"> <span class="progress-bar"></span> </div> </progress> </header> <div class="container mt-5" role="main"> <div class="post"> <header class="post-header"> <h1 class="post-title">TycoonBank 🏦</h1> <p class="post-description">A touch-first digital board game banker built for tabletop iPad play — realistic credit cards, drag-and-drop transfers, kid-proof multiplier keypads, and an instant Undo button.</p> </header> <article> <h2 id="why-i-built-this">Why I built this</h2> <p>If you’ve ever played <em>Monopoly</em> with young kids, you know the delicate balance between family fun and sheer financial chaos. We’ve been playing the modern <em>Electronic Banking</em> edition for years — the one with plastic credit cards and a battery-powered terminal. It eliminated the dreaded mess of crumpled paper bills, missing change, and four-hour games where half the time is spent counting twenty-dollar notes off the carpet.</p> <p>Until one weekend, the banking hardware gave up. A corroded battery contact, stuck membrane buttons, and a glitched LCD screen: our trusty plastic terminal officially died mid-game, leaving two very disappointed kids staring at a half-finished board.</p> <p>Naturally, I reached for an iPad to find a replacement. Surely in this day and age, there must be a decent digital Monopoly banker app?</p> <p>Turns out, virtually everything out there was <strong>crap</strong>:</p> <ul> <li> <strong>Ad-infested nightmares</strong> — games constantly interrupted by 30-second unskippable casino ads in front of 10-year-olds.</li> <li> <strong>Clunky single-phone ergonomics</strong> — apps designed for one person holding an iPhone, forcing everyone to pass a phone back and forth across the board for every single rent payment.</li> <li> <strong>Paywalls &amp; account spam</strong> — requiring logins, cloud subscriptions, or tracking scripts just to add and subtract virtual cash.</li> <li> <strong>Tiny buttons and zero safety nets</strong> — one stray finger tap turns a 200k rent payment into a 20M bank-breaking catastrophe, with zero undo functionality and immediate sibling tears.</li> </ul> <p>I didn’t want a bloated native app, and I certainly didn’t want ads at family game night. So I decided to <strong>vibe code</strong> my own solution tailored exactly to how we play: <strong>TycoonBank</strong>.</p> <p>The design goal was simple: place an iPad flat in the center of the table, surround a central Bank Vault with personalized player credit cards, and make transactions tactile, intuitive, and completely kid-proof — all running 100% client-side in the browser, hosted for free on GitHub Pages.</p> <h2 id="what-it-does">What it does</h2> <ul> <li> <strong>Central Tabletop iPad Layout</strong> — designed specifically to sit flat in the center of the game table. The Bank Vault sits in the middle, framed by player accounts. Players sitting opposite the iPad can tap a 180° rotation button on their card so their balance and name face them right-side up.</li> <li> <strong>Tactile Credit Cards</strong> — each player gets a luxury credit card complete with EMV chip, contactless wave icon, customizable avatars (🎩, 🏎️, 🐈, 🚢, 👑, etc.), and metallic foil themes (Gold, Obsidian, Sapphire, Emerald, Ruby, Rose Gold, Titanium, and Amethyst).</li> <li> <strong>Drag-and-Drop &amp; Tap Transfers</strong> — pay rent the way kids intuitively expect: drag your card onto another player’s card to send funds, drag onto the Bank Vault to pay fines or buy properties, or drag the Bank Vault onto your card to collect Go rewards. Standard tap buttons are also right there for fast gameplay.</li> <li> <strong>Kid-Proof Multiplier Keypad (<code class="language-plaintext highlighter-rouge">2</code> + <code class="language-plaintext highlighter-rouge">Mio</code> = 2.000.000)</strong> — typing out six zeroes on glass is an invitation to accidental 10x blunders. The custom keypad features quick multiplier shortcuts (<code class="language-plaintext highlighter-rouge">Tsd/k</code>, <code class="language-plaintext highlighter-rouge">Mio</code>, <code class="language-plaintext highlighter-rouge">Mrd/B</code>) and a real-time written-words preview (<em>“2 Millionen”</em> / <em>“2 Million”</em>), so everyone can see exactly what’s being transferred before confirming.</li> <li> <strong>The Sibling Peacekeeper: Audit Ledger with 1-Click Undo</strong> — “Wait, you charged me twice!” or “I typed 2M instead of 200k!” no longer derails the evening. The full transaction drawer logs every single transfer chronologically, and a single click on <strong>Undo</strong> rolls back the balances instantly. You can even export the full game ledger to CSV.</li> <li> <strong>Zero-Dependency Web Audio Effects</strong> — satisfying mechanical cash register “cha-chings”, card swipe beeps, and Pass GO fanfares synthesized entirely in the browser using the Web Audio API — no bulky MP3 downloads or network requests required.</li> <li> <strong>Bilingual &amp; Rule-Flexible</strong> — toggle seamlessly between English and German with localized number abbreviations. Configure starting capital (e.g. 15.000.000 modern or classic 1.500), Pass GO payouts, and currency symbols (€, $, £, ℳ, CHF).</li> <li> <strong>Offline-First &amp; Instant Share via QR Code</strong> — zero accounts, no server database. The full game state is compressed into a URL hash using <code class="language-plaintext highlighter-rouge">lz-string</code> and rendered as a live QR code. Scan it with a smartphone to view or transfer the game, and enjoy automatic background saving to <code class="language-plaintext highlighter-rouge">localStorage</code>.</li> </ul> <h2 id="how-it-works">How it works</h2> <p>TycoonBank was vibe-coded using modern web tech: <strong>React 19</strong>, <strong>TypeScript</strong>, <strong>Vite</strong>, and <strong>Tailwind CSS v4</strong>, with <strong>@dnd-kit</strong> providing smooth touch and pointer drag-and-drop interactions.</p> <p>Because there is zero backend, the entire application is bundled into static HTML, CSS, and JS assets. It deploys automatically via GitHub Actions directly to <strong>GitHub Pages</strong>, meaning it loads instantaneously, works completely offline once cached, and collects zero user data.</p> <p>Whenever a game is in progress, any transaction automatically synchronizes to <code class="language-plaintext highlighter-rouge">localStorage</code>. If you want to switch devices mid-game or let someone spectate, the app serializes and compresses the entire store into a compact Base64/lz-string hash in the URL.</p> <h2 id="try-it">Try it</h2> <p><strong><a href="https://petermue.github.io/tycoon-bank">petermue.github.io/tycoon-bank</a></strong></p> <p>Place your iPad or laptop on the table, customize your player cards, and take the stress (and paper mess) out of your next game night.</p> <p>Source code: <a href="https://github.com/PeterMue/tycoon-bank" rel="external nofollow noopener" target="_blank">github.com/PeterMue/tycoon-bank</a></p> </article> </div> </div> <footer class="fixed-bottom" role="contentinfo"> <div class="container mt-0"> © Copyright 2026 Peter Müller. Powered by <a href="https://jekyllrb.com/" target="_blank" rel="external nofollow noopener">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio" rel="external nofollow noopener" target="_blank">al-folio</a> theme. Hosted by <a href="https://pages.github.com/" target="_blank" rel="external nofollow noopener">GitHub Pages</a>. Photos from <a href="https://unsplash.com" target="_blank" rel="external nofollow noopener">Unsplash</a>. </div> </footer> <script>
+  window.alFolio = {
+    compatBootstrap: false
+  };
+</script> <script src="/assets/js/nav-toggle.js?v=141bd79a73ebc0f0b6ea58e440ae79fc"></script> <script defer src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha256-Nn1q/fx0H7SNLZMQ5Hw5JLaTRZp0yILA/FRexe19VdI=" crossorigin="anonymous"></script> <script defer src="https://cdn.jsdelivr.net/npm/imagesloaded@5.0.0/imagesloaded.pkgd.min.js" integrity="sha256-htrLFfZJ6v5udOG+3kNLINIKh2gvoKqwEhHYfTTMICc=" crossorigin="anonymous"></script> <script defer src="/assets/js/masonry.js?v=e49affc7bd2646f6acdad1dbe02c2359" type="text/javascript"></script> <script src="/assets/js/tooltips-setup.js?v=fe487e99db6c43751e6e7bdb2d6a0611"></script> <script src="/assets/js/no_defer.js?v=53b1b1a645525975c963ce8bf8bfefcf"></script> <script defer src="/assets/js/common.js?v=87baac90f765f2f3362dcf6aaf312a8a"></script> <script defer src="/assets/js/copy_code.js?v=c8a01c11a92744d44b093fc3bda915df" type="text/javascript"></script> <script defer src="/assets/js/jupyter_new_tab.js?v=896d254890d9b47f0281f63bfccf0dee"></script> <script defer src="https://cdn.jsdelivr.net/npm/vanilla-cookieconsent@3.1.0/dist/cookieconsent.umd.js" integrity="sha256-vG4vLmOB/AJbJ6awr7Wg4fxonG+fxAp4cIrbIFTvRXU=" crossorigin="anonymous"></script> <script defer src="/assets/al_cookie/js/cookie-theme-sync.js"></script> <script>
+window.dataLayer = window.dataLayer || [];
+
+if (typeof window.gtag !== "function") {
+  window.gtag = function () {
+    window.dataLayer.push(arguments);
+  };
+}
+
+var gtag = window.gtag;
+gtag("consent", "default", {
+  ad_storage: "denied",
+  analytics_storage: "denied",
+  functionality_storage: "denied",
+  personalization_storage: "denied",
+});
+
+var cookieConsentRetryCount = 0;
+var COOKIE_CONSENT_MAX_RETRIES = 50;
+
+function initializeCookieConsent() {
+  if (!window.CookieConsent) {
+    if (cookieConsentRetryCount++ < COOKIE_CONSENT_MAX_RETRIES) {
+      setTimeout(initializeCookieConsent, 100);
+    } else {
+      console.error("CookieConsent library failed to load");
+    }
+    return;
+  }
+
+  window.CookieConsent.run({
+    categories: {
+      necessary: {
+        enabled: true,
+        readOnly: true,
+      },
+      analytics: {},
+    },
+    language: {
+      default: "en",
+      translations: {
+        en: {
+          consentModal: {
+            title: "We use cookies",
+            description:
+              'This website uses cookies to improve your experience and analyze site traffic. By clicking "Accept all", you consent to our use of cookies.',
+            acceptAllBtn: "Accept all",
+            acceptNecessaryBtn: "Reject all",
+            showPreferencesBtn: "Manage Individual preferences",
+          },
+          preferencesModal: {
+            title: "Manage cookie preferences",
+            acceptAllBtn: "Accept all",
+            acceptNecessaryBtn: "Reject all",
+            savePreferencesBtn: "Accept current selection",
+            closeIconLabel: "Close modal",
+            sections: [
+              {
+                title: "Cookie usage",
+                description:
+                  "We use cookies to ensure the basic functionalities of the website and to enhance your online experience. You can choose for each category to opt-in/out whenever you want.",
+              },
+              {
+                title: "Strictly Necessary cookies",
+                description:
+                  "These cookies are essential for the proper functioning of the website. Without these cookies, the website would not work properly.",
+                linkedCategory: "necessary",
+              },
+              {
+                title: "Analytics cookies",
+                description:
+                  "These cookies allow us to measure traffic and analyze your behavior to improve our service.",
+                linkedCategory: "analytics",
+              },
+              {
+                title: "More information",
+                description:
+                  'For any queries in relation to our policy on cookies and your choices, please <a class="cc-link" href="https://petermue.github.io/#contact">contact us</a>.',
+              },
+            ],
+          },
+        },
+      },
+    },
+    onFirstConsent: function (consentData) {
+      updateConsentMode(consentData);
+    },
+    onChange: function (consentData) {
+      updateConsentMode(consentData);
+    },
+  });
+
+  function updateConsentMode(consentData) {
+    var categories = consentData.categories || consentData;
+
+    if (!categories || typeof categories !== "object") {
+      console.warn("Invalid consent data structure:", consentData);
+      return;
+    }
+
+    gtag("consent", "update", {
+      analytics_storage: categories.analytics ? "granted" : "denied",
+      ad_storage: "denied",
+      functionality_storage: "denied",
+      personalization_storage: "denied",
+    });
+
+    if (categories.analytics) {
+      console.debug("Analytics consent granted; tracking enabled for configured providers.");
+    } else {
+      console.debug("Analytics consent denied; tracking remains blocked.");
+    }
+  }
+}
+
+initializeCookieConsent();
+
+</script> <script defer src="https://cdn.jsdelivr.net/npm/medium-zoom@1.1.0/dist/medium-zoom.min.js" integrity="sha256-ZgMyDAIYDYGxbcpJcfUnYwNevG/xi9OHKaR/8GK+jWc=" crossorigin="anonymous"></script> <script defer src="/assets/al_img_tools/js/zoom.js"></script> <script defer src="/assets/js/progress-bar.js?v=499464c5c63ced6cf7ad62509f1e2610" type="text/javascript"></script> <script src="https://cdn.jsdelivr.net/npm/vanilla-back-to-top@7.2.1/dist/vanilla-back-to-top.min.js" integrity="sha256-uMJJ3EoTyfRBoTbR+lrfu1uRQ87RZG8AR3cVNuQVeFg=" crossorigin="anonymous"></script> <script>
+    addBackToTop();
+  </script> <script type="module" src="/assets/al_search/js/search/ninja-keys.min.js"></script> <ninja-keys hidebreadcrumbs noautoloadmdicons placeholder="Type to start searching"></ninja-keys> <script src="/assets/al_search/js/search-setup.js"></script> <script>
+// get the ninja-keys element
+const ninja = document.querySelector('ninja-keys');
+
+// add the home and posts menu items
+ninja.data = [{
+    id: "nav-about",
+    title: "about",
+    section: "Navigation",
+    handler: () => {
+      window.location.href = "/";
+    },
+  },{id: "nav-blog",
+          title: "blog",
+          description: "",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/blog/";
+          },
+        },{id: "nav-projects",
+          title: "projects",
+          description: "A growing collection of your cool projects.",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/projects/";
+          },
+        },{id: "nav-repositories",
+          title: "repositories",
+          description: "A collection of my open-source projects, tools I’ve contributed to, and repositories I find interesting.",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/repositories/";
+          },
+        },{id: "nav-cv",
+          title: "CV",
+          description: "Software Architect | Enterprise Integration, API Gateways, Modernization &amp; Cloud-Native Stacks",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/cv/";
+          },
+        },{id: "post-from-scattered-write-ups-to-one-central-hub",
+        
+          title: "from scattered write-ups to one central hub",
+        
+        description: "why this blog exists, and what&#39;s coming",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/from-scattered-write-ups-to-one-central-hub/";
+          
+        },
+      },{id: "news-hello-world-this-is-the-first-announcement",
+          title: 'Hello world! This is the first announcement.',
+          description: "",
+          section: "News",},{id: "projects-birthday-balloon-bash",
+          title: 'Birthday Balloon Bash 🎈',
+          description: "A PIN-protected, gamified birthday surprise page — no server, no accounts, just balloons, confetti and a heartfelt message delivered by QR code.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/birthday-balloon-bash/";
+            },},{id: "projects-easy-invoice",
+          title: 'Easy Invoice 🧾',
+          description: "A single-file, no-nonsense invoice generator for people who&#39;d rather not open Word — click, type, print, done.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/easy-invoice/";
+            },},{id: "projects-tycoonbank",
+          title: 'TycoonBank 🏦',
+          description: "A touch-first digital board game banker built for tabletop iPad play — realistic credit cards, drag-and-drop transfers, kid-proof multiplier keypads, and an instant Undo button.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/tycoon-bank/";
+            },},{
+        id: 'social-email',
+        title: 'email',
+        section: 'Socials',
+        handler: () => {
+          window.open("mailto:%70.%6D%75%65%6C%6C%65%72.%6E%69%6E%65%74%77%6F+%67%69%74%68%75%62@%67%6D%61%69%6C.%63%6F%6D", "_blank");
+        },
+      },{
+        id: 'social-rss',
+        title: 'RSS Feed',
+        section: 'Socials',
+        handler: () => {
+          window.open("/feed.xml", "_blank");
+        },
+      },{
+        id: 'social-github',
+        title: 'GitHub',
+        section: 'Socials',
+        handler: () => {
+          window.open("https://github.com/PeterMue", "_blank");
+        },
+      },{
+        id: 'social-instagram',
+        title: 'Instagram',
+        section: 'Socials',
+        handler: () => {
+          window.open("https://instagram.com/p.mueller.ninetwo", "_blank");
+        },
+      },{
+      id: 'light-theme',
+      title: 'Change theme to light',
+      description: 'Change the theme of the site to Light',
+      section: 'Theme',
+      handler: () => {
+        setThemeSetting("light");
+      },
+    },
+    {
+      id: 'dark-theme',
+      title: 'Change theme to dark',
+      description: 'Change the theme of the site to Dark',
+      section: 'Theme',
+      handler: () => {
+        setThemeSetting("dark");
+      },
+    },
+    {
+      id: 'system-theme',
+      title: 'Use system default theme',
+      description: 'Change the theme of the site to System Default',
+      section: 'Theme',
+      handler: () => {
+        setThemeSetting("system");
+      },
+    },];
+
+</script> <script src="/assets/al_search/js/shortcut-key.js"></script> <script defer src="/assets/al_email_protect/js/email-protect.js"></script> </body> </html>
