@@ -4,6 +4,7 @@ github_users:
 repo_description_lines_max: 2
 
 github_repos:
+  - petermue/tycoon-bank
   - petermue/easy-invoice
   - petermue/birthday-balloon-bash
   - petermue/eierautomat
